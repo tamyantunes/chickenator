@@ -7,13 +7,17 @@ generateBtn.addEventListener("click", generateChickenName);
 
 function generateChickenName() {
     let chickenName = document.querySelector(".chicken-name");
+    let title = document.querySelector("h1");
     chickenName.classList.remove("active");
+    title.classList.remove("active");
     
     
     setTimeout(() => {
         const indexName = Math.floor(Math.random() * names.length); 
         const chickenNameElement = document.querySelector(".chicken-name");
+        const title = document.querySelector("h1");
         chickenNameElement.classList.add("active");
+        title.classList.add("active");
         
         chickenNameElement.innerHTML = names[indexName];
   }, 300);

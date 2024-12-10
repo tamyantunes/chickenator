@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Pixelify Sans", serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background: linear-gradient(to bottom, #8df4ef, #ffe693);
+  color: white;
+  font-family: "Pixelify Sans", serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+
+  & h1 {
+    width: max-content;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    color: #b46e43;
+    font-weight: 500;
+  }
+}
+
+.chicken-name {
+  width: 80%;
+  padding: 0.5rem 2rem;
+  position: absolute;
+  top: 42%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 100px;
+  border: 2px solid #d9a066;
+
+  font-size: 1.5rem;
+  color: #e97373;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+
+  background: rgba(250, 250, 250, 0.3);
+}
+
+@media (min-width: 530px) {
+  .chicken-name {
+    width: fit-content;
+  }
+  .container {
+    h1 {
+      font-size: 4rem;
+    }
+  }
+}
+@media (min-width: 1080px) {
+  .chicken-name {
+    font-size: 2.5rem;
+  }
+}
+
+.active {
+  top: 37%;
+  opacity: 1;
+}
+
+.btn {
+    position: relative;
+  width: fit-content;
+  height: fit-content;
+  padding: 0.5rem 1.5rem;
+  border-radius: 0.5rem;
+  background: #d9a066;
+  color: #ffedb0;
+  border: 4px solid #9b632b;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  margin-top: 80px;
+  
+  &:hover {
+    transform: translateY(-0.25rem);
+    color: #fff;
+  }
+}
+
+a, :active, a:visited, a:hover{
+    text-decoration: none;
+}
+
+.btn-icon{
+    position: absolute;
+    
+    left: 1%;
+    top: -50px;
+    width: 3.5rem;
+    height: 3.5rem;
+    transform: scaleX(-1);
+    image-rendering: pixelated;
+}
+
+
+
+
+
+.btn-small {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+footer {
+  position: fixed;
+  width: 100vw;
+  height: 115px;
+  bottom: 0;
+  left: 0;
+  padding: 100px 0;
+  padding-bottom: 0;
+  image-rendering: pixelated;
+  background-image: url("./assets/ground.png");
+  background-repeat: repeat-x;
+  background-size: 397px 115px;
+
+  & .galinha {
+    position: absolute;
+    bottom: 28px;
+    right: 10%;
+    width: 96px;
+    height: 96px;
+    image-rendering: pixelated;
+  }
+
+  & .fliped {
+    transform: scaleX(-1);
+    left: 12%;
+  }
+}
